@@ -1,0 +1,355 @@
+<script>
+    function pb(menu) {
+     var i;
+     var x = document.getElementsByClassName("kota");
+     for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     }
+     document.getElementById(menu).style.display = "block";
+    }
+    </script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+
+    <div class="w3-container w3-black">
+    <center>
+    <video autoplay muted loop height='250px'>
+        <source src='pb.mp4' type='video/mp4'>
+    </video>
+    </div>
+    
+    <div class='w3-bar w3-dark-gray w3-card-4'>
+    <button class="w3-bar-item w3-button" onclick="pb('home')">HOME</button>
+    <button class="w3-bar-item w3-button" onclick="pb('profile')">My Profile</button>
+    <button class="w3-bar-item w3-button" onclick="pb('title')">Title</button>
+     <button class="w3-bar-item w3-button" onclick="pb('item')">Item</button>
+     <button class="w3-bar-item w3-button" onclick="pb('character')">Character</button>
+        <div class='w3-dropdown-hover'>
+        <button class="w3-bar-item w3-button" onclick="pb('Weapon')">Weapon</button>
+            <div class='w3-dropdown-content w3-bar-block w3-card-4'>
+                <button class="w3-bar-item w3-button w3-green" onclick="pb('assault')">Assault</button>
+                <button class="w3-bar-item w3-button w3-green" onclick="pb('submachine')">Submachine</button>
+                <button class="w3-bar-item w3-button w3-green" onclick="pb('sniper')">Sniper</button>
+                <button class="w3-bar-item w3-button w3-green" onclick="pb('shotgun')">Shotgun</button>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+    body {font-family: inherit;
+    color: white;}
+    </style>
+    <div id="home" class="w3-container kota w3-animate-zoom" style=display:none>
+    <center> 
+    <h1> 
+        <b>
+        SELAMAT DATANG!
+        </b>
+    </h1>
+    </center>
+    <center><img src="ss/cover.jpg" style="width: 1000px; height:700px ;"></center>
+    </div>
+
+    <div id="profile" class="w3-container kota w3-animate-zoom" style=display:none>
+    <body bgcolor='black'>
+    <center>
+        <b>
+            <font size="6" color="chartreuse"> SELAMAT DATANG!!</font>
+        </b>
+    <hr>
+    <br>
+    </center>
+    <h1>
+        <b>
+        <font size="5" color="chartreuse">My Profile</font>
+        </b>
+    </h1>
+    NAMA   : Adib Jamhari
+    <br> 
+    NIM    : 10123409
+    <br>
+    PRODI  : Teknik Informatika
+    <br>
+    
+    <h3>
+     <b>
+        <font color="orange">Website Yang Di Buat</font>
+    </b>
+    </h3>
+    <p> Dalam tugas akhir Web Program ini, saya membuat website bertema-kan game, game PC ataupun laptop yaitu Point Blank.
+    <p> <b>Kenapa Game Point Blank?</b></p>
+    <p> <blockquote>Karena saya dari dulu memang suka bermain game ini sejak kecil.Oleh karena itu saya terfikir untuk membuat website bertema-kan Point 
+        Blank yang dimana saya mengerti game tersebut sehingga saya bisa membuat website yang saya sendiri mengerti apa yang saya buat.
+    </p>
+    </blockquote>
+    <br>
+    </font>
+    </div>
+    
+    <div id="title" class="w3-container kota w3-animate-zoom" style=display:none>
+    <center>
+        <p align="left">
+            Salah satu fitur menarik yang bisa kalian manfaatkan di Point Blank adalah Title. Title merupakan gelar spesialisasi senjata yang bermanfaat untuk memberi nilai tambah jika disesuaikan dengan tipe senjata yang akan digunakan ketika bermain.Title juga memiliki beberapa efek yang berbeda-beda, mulai dari meningkatkan kecepatan dalam menembak, meningkatkan akurasi, menambah damage dan lain sebagainya. Untuk Title yang berjenis sama tidak bisa digunakan secara bersamaaan. Misalnya title Senior Assaulter dan Assaulter Private kedua title tersebut tidak akan bisa digunakan secara bersamaan.
+        </p>
+        <img src='ss/t1.png'
+        style="width: 800px;height:800px;">
+      
+        <div class='w3-bar w3-green w3-card-4'>
+        <p>
+            <h4>
+                <b>Jenis-Jenis Fungsi Title:</b>
+            </h4>
+        </p>
+        </div>
+        <p align="left">
+        <font color='orange'>1.Moving Agillity</font><br>
+        Moving Agillity + mempunyai arti dengan menggunakan title ini, berarti bisa menambahkan kecepatan karakter PB untuk bergerak ke kiri dan kanan dengan lincah.<br>
+        <font color='orange'>2.Moving Speed</font><br>
+        Moving Speed mempunyai arti ketika menggunakan title ini, maka pergerakan karakter kedepan bisa lebih cepat dari biasanya.<br>
+        <font color='orange'>3.Jump Ability</font><br>
+        Jump Ability berfungsi untuk menambah tinggi loncatan sebuah karatkter.<br>
+        <font color='orange'>4.Weapon Reaction</font><br>
+        Weapon Reaction berfungsi untuk mengurangi getaran senjata ketika kita sedang menembak, sehingga sasaran tidak meleset.<br>
+        <font color='orange'>5.Accuracy</font><br>
+        Accuracy berfungsi untuk menambah keakuratan peluru yang kita tembakan, sehingga bisa mengenai sasaran dengan tepat.<br>
+        <font color='orange'>6.Range Damage</font><br>
+        Range Damage berfungsi untuk menambahkan damage peluru yang kita tembakan, sehingga jika mengenai musuh akan terasa menyakitkan.<br>
+        <font color='orange'>7.First Shot</font><br>
+        First Shot berfungsi menambah kecepatan peluru yang pertama kali kita temabakan.<br>
+        <font color='orange'>8.Fire Speed</font><br>
+        Fire Speed berfungsi menambahkan kecepatan peluru yang ditembakan dari peluru pertama sampai peluru selanjutnya secara beraturan.<br>
+        <font color='orange'>9.Throw Distance</font><br>
+        Throw Distance berfungsi untuk memperjauh lemparan granat atau smoke.<br>
+        
+    
+        </p>
+    </div>
+    
+    <div id="item" class="w3-container kota w3-animate-zoom" style=display:none>
+        <center>
+            <h2><b> 
+                <font color="orange">ABILITIES</font> 
+            </h2>
+        </center>
+        <hr>
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+
+        <font size=3 color="chartreuse"> 
+            Bullet Proof Vest <p align="right">Increse Grenade Slot</font></p>
+        <hr>
+        <table>
+        <td><img src='ss/1.png'></td>
+        <td><img src='ss/6.png'></td>
+        </table>
+        </div>
+        
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+            <font size=3 color='chartreuse'> 
+            Full Metal Jacket Ammo <p align="right">Increase Invicible Time</font></p>
+            <hr>
+            <table>
+            <td><img src='ss/2.png'></td>
+            <td><img src='ss/7.png'></td>
+            </table>
+        </div>    
+            
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+            <font size=3 color='chartreuse'> 
+            Xp Up 130% <p align="right">Increase Throwing 2 Slot</font></p>
+
+            <hr>
+            <table>
+            <td><img src='ss/3.png'>
+            <td><img src='ss/8.png'></td>
+            </table>
+            </div>
+            
+            <div class='w3-panel w3-card-4 w3-dark-gray'>
+            <font size=3 color='chartreuse'> 
+            Ammo Up 40% <p align="right">Mega Hp Up 10%</font></p>
+            <hr>
+            <table>
+            <td><img src='ss/4.png'>
+            <td><img src='ss/9.png'></td>
+            </table>
+            </div>
+
+            <div class='w3-panel w3-card-4 w3-dark-gray'>
+                <font size=3 color='chartreuse'> 
+                C4 Speed Kit <p align="right">Quick Change Weapon 50%</font></p>
+                <hr>
+                <table>
+                <td><img src='ss/5.png'>
+                <td><img src='ss/10.png'></td>    
+                </table>
+                </div>
+            </b>
+    </div>
+    
+    <div id="character" class="w3-container kota w3-animate-zoom" style=display:none>
+    <h1>
+    <b>
+        <center>
+            <font color="orange">TYPE CHARACTER</font> 
+        </center>
+        </h1>
+    <hr>
+
+    <table>
+        
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+            <font size=4 color='chartreuse'>
+        Fanatic Tarantula<p align="right">Fanatic Keen Eyes</font></p>
+       </div>
+        <hr> 
+        <table>
+        <td><img src='ss/c1.png'></td>
+        <td><p><font color="w3-blue">Status Karakter:</font><br>
+            <font color="orange">Hp+20% dan Movement speed meningkat(Dapat di duplikasi)</font></p></td>
+        <td><img src='ss/c2.png'>
+        </table>
+         
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+            <font size=4 color='chartreuse'>
+        Dasom Red<p align="right">Dasom Blue</font></p>
+        </div>
+        <hr>
+        <table>
+        <td><img src='ss/c4.png'>
+        <td><p><font color="w3-blue">Status Karakter:</font><br>
+            <font color="orange">Hp+20% dan Movement speed meningkat(Dapat di duplikasi)</font></p></td>
+        <td><img src='ss/c3.png'>
+        </table>
+
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+            <font size=4 color='chartreuse'>
+        Reinforce Natasha<p align="right">Invasion Hide</font></p></h2>
+        </div>
+        <hr>
+        <table>
+        <td><img src='ss/c5.png'>
+        <td><p><font color="w3-blue">Status Karakter:</font><br>
+            <font color="orange">Hp+20% dan Movement speed meningkat(Dapat di duplikasi)</font></p></td>
+        <td><img src='ss/c6.png'>
+        </table>
+    </b>
+    </table>
+    </div>
+
+    <div id="assault" class="w3-container kota w3-animate-zoom" style=display:none>
+        <center>
+            <h2><b> 
+                <font color="orange">ASSAULT</font> 
+            </h2>
+        </center>
+        <hr>
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+
+        <font size=3 color="chartreuse"> 
+            Aug A3 Blue Diamond<p align="right">AK-47 PBIC 2013</font></p>
+        <hr>
+        <table>
+        <td><img src='ss/a1.png'></td>
+        <td><img src='ss/a2.png'></td>
+        </table>
+        </div>
+
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+        <font size=3 color="chartreuse"> 
+            AK Sopmod Kingcobra<p align="right">Famas G2 Zepetto</font></p>
+        <hr>
+        <table>
+        <td><img src='ss/a3.png'></td>
+        <td><img src='ss/a4.png'></td>
+        </table>
+        </div>
+    </div>
+
+    <div id="submachine" class="w3-container kota w3-animate-zoom" style=display:none>
+        <center>
+            <h2><b> 
+                <font color="orange">SUBMACHINE</font> 
+            </h2>
+        </center>
+        <hr>
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+
+        <font size=3 color="chartreuse"> 
+            Dragon<p align="right">M1928 Thompson</font></p>
+        <hr>
+        <table>
+        <td><img src='ss/s1.png'></td>
+        <td><img src='ss/s2.png'></td>
+        </table>
+        </div>
+
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+        <font size=3 color="chartreuse"> 
+            APC9 Milkyway<p align="right">P90 Ext GSL2015</font></p>
+        <hr>
+        <table>
+        <td><img src='ss/s3.png'></td>
+        <td><img src='ss/s4.png'></td>
+        </table>
+        </div>
+    </div>
+
+    <div id="sniper" class="w3-container kota w3-animate-zoom" style=display:none>
+        <center>
+            <h2><b> 
+                <font color="orange">SNIPER</font> 
+            </h2>
+        </center>
+        <hr>
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+
+        <font size=3 color="chartreuse"> 
+            Barret M82A1 Premium<p align="right">AS-50 Prasasti</font></p>
+        <hr>
+        <table>
+        <td><img src='ss/sn1.png'></td>
+        <td><img src='ss/sn2.png'></td>
+        </table>
+        </div>
+
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+        <font size=3 color="chartreuse"> 
+            Cheytac M200 Lebaran 2016<p align="right">Kar98k ZF39 10Anniv</font></p>
+        <hr>
+        <table>
+        <td><img src='ss/sn3.png'></td>
+        <td><img src='ss/sn4.png'></td>
+        </table>
+        </div>
+    </div>
+
+    <div id="shotgun" class="w3-container kota w3-animate-zoom" style=display:none>
+        <center>
+            <h2><b> 
+                <font color="orange">SHOTGUN</font> 
+            </h2>
+        </center>
+        <hr>
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+
+        <font size=3 color="chartreuse"> 
+            Cerberus Fire Dragon<p align="right">M1887 Dark Crystal</font></p>
+        <hr>
+        <table>
+        <td><img src='ss/sg1.png'></td>
+        <td><img src='ss/sg2.png'></td>
+        </table>
+        </div>
+
+        <div class='w3-panel w3-card-4 w3-dark-gray'>
+        <font size=3 color="chartreuse"> 
+            Zombie Slayer Graduation<p align="right">SPAS-15 Shark</font></p>
+        <hr>
+        <table>
+        <td><img src='ss/sg3.png'></td>
+        <td><img src='ss/sg4.png'></td>
+        </table>
+        </div>
+    </div>

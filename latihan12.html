@@ -1,0 +1,88 @@
+<form name=form>
+<script>
+function proses()
+{
+var bagian=document.form.bagian.value;
+if(bagian=="Pemasaran") var gajipokok=6000000;
+if(bagian=="HRD") var gajipokok=800000;
+if(bagian=="Produksi") var gajipokok=700000;
+if(bagian=="OB") var gajipokok=300000;
+
+document.form.gajipokok.value=gajipokok;
+
+var pendidikan=document.form.pendidikan.value;
+if(pendidikan=="S1") var tjpendidikan=1000000;
+if(pendidikan=="S2") var tjpendidikan=2000000;
+if(pendidikan=="S3") var tjpendidikan=3000000;
+document.form.tjpendidikan.value=tjpendidikan;
+
+var tj=0;
+if(document.form.tj_anak.checked) tj=tj + (gajipokok*0.1);
+if(document.form.tj_istri.checked) tj=tj + (gajipokok*0.15);
+if(document.form.tj_makan.checked) tj=tj + (gajipokok*0.2);
+document.form.tjlain.value=tj;
+
+var totalgaji=gajipokok+tjpendidikan+tj;
+document.form.totalgaji.value=totalgaji;
+}
+
+function reset()
+{
+	document.form.namapegawai.value='';
+	document.form.bagian.value='';
+	document.form.gajipokok.value='';
+	document.form.tjpendidikan.value='';
+	document.form.tjlain.value='';
+	document.form.totalgaji.value='';
+}
+</script>
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+
+<div class="w3-container">
+
+	<div class="w3-panel w3-brown">
+	<center>
+	<h1>Program Gaji Pegawai	
+	</div>
+	
+	<div class="w3-panel w3-blue w3-card-4">
+	<p>
+	<center>
+	<table>
+		<tr><td>Nama Pegawai<td><input class="w3-input" type="text" name="namapegawai">
+		<tr><td>Bagian<td><select class="w3-select" type="select" name="bagian">
+		<option>HRD
+		<option>Pemasaran
+		<option>Produksi
+		<option>OB
+		
+		<tr><td>Pendidikan<td><input class="w3-radio" type="radio" name="pendidikan" value="S1">S1
+		<input class="w3-radio" type="radio" name="pendidikan" value="S2">S2
+		<input class="w3-radio" type="radio" name="pendidikan" value="S3">S3
+		
+		<tr><td>Tunjangan Lain:<td>
+			<input class="w3-checkbox" type="checkbox" name="tj_anak">Anak
+			<input class="w3-checkbox" type="checkbox" name="tj_istri">Istri
+			<input class="w3-checkbox" type="checkbox" name="tj_makan">Makan
+
+			<tr><td colspan=2><hr>
+		<tr><td>Gaji Pokok<td><input class="w3-input" type="text" name="gajipokok">
+		<tr><td>Tunj.pendidikan<td><input class="w3-input" type="text" name="tjpendidikan">
+		<tr><td>Tunjangan lain<td><input class="w3-input" type="text" name="tjlain">
+		<tr><td>Total Gaji<td><input class="w3-input" type="text" name="totalgaji">
+	</table>
+	</p>
+	</div>
+	
+	
+	<div class="w3-panel w3-cyan">
+	<p>
+	<center>
+		<input type="button" class="w3-button w3-red" value="proses" onclick="proses()">
+		<input type="button" class="w3-button w3-blue" value="Reset" onclick="reset()">
+	</p>
+	</div>
+</div> 

@@ -1,0 +1,103 @@
+<form name=form>
+<script>
+function proses()
+{
+var bagian=document.form.bagian.value;
+var golongan=document.form.golongan.value;
+if(bagian=="Keuangan");
+	if(golongan=="a") var gajipokok=5000000;
+	if(golongan=="b") var gajipokok=6000000;
+	if(golongan=="c") var gajipokok=7000000;
+	
+if(bagian=="Produksi");
+	if(golongan=="a") var gajipokok=4000000;
+	if(golongan=="b") var gajipokok=5000000;
+	if(golongan=="c") var gajipokok=6000000;
+	
+if(bagian=="Pemasaran");
+	if(golongan=="a") var gajipokok=3000000;
+	if(golongan=="b") var gajipokok=4000000;
+	if(golongan=="c") var gajipokok=5000000;
+
+document.form.gajipokok.value=gajipokok;
+
+var tj=0;
+if(document.form.tj_makan.checked) tj=tj + (gajipokok*0.1);
+if(document.form.tj_kesehatan.checked) tj=tj + (gajipokok*0.2);
+if(document.form.tj_keluarga.checked) tj=tj + (gajipokok*0.3);
+
+document.form.tunjangan.value=tj;
+
+
+var tjanak=document.form.tjanak.value;
+var tj1=0;
+if(document.form.tjanak.checked)tj1=tj1 + (gajipokok*0.1/tjanak);
+
+document.form.tjanak.value=tjanak;
+
+var totalgaji=gajipokok+tunjangan+tjanak;
+document.form.totalgaji.value=totalgaji;
+}
+
+function reset()
+{
+	document.form.namapegawai.value='';
+	document.form.bagian.value='';
+	document.form.gajipokok.value='';
+	document.form.tunjangan.value='';
+	document.form.tjanak.value='';
+	document.form.totalgaji.value='';
+}
+</script>
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+
+<div class="w3-container">
+
+	<div class="w3-panel w3-brown">
+	<center>
+	<h1>Program Gaji Pegawai	
+	</div>
+	
+	<div class="w3-panel w3-blue w3-card-4">
+	<p>
+	<center>
+	<table>
+		<tr><td>Nama Pegawai:<td><input class="w3-input" type="text" name="namapegawai">
+		<tr><td>Bagian:<td><select class="w3-select" type="select" name="bagian">
+		<option>Keuangan
+		<option>Produksi
+		<option>Pemasaran
+		
+		<tr><td>Golongan:<td><input class="w3-radio" type="radio" name="golongan" value="a">A
+		<input class="w3-radio" type="radio" name="golongan" value="b">B
+		<input class="w3-radio" type="radio" name="golongan" value="c">C
+		<tr><td colspan=2><hr>
+		
+		<tr><td>Tunjangan:<td>
+			<input class="w3-checkbox" type="checkbox" name="tj_makan">Makan<br>
+			<input class="w3-checkbox" type="checkbox" name="tj_kesehatan">Kesehatan<br>
+			<input class="w3-checkbox" type="checkbox" name="tj_keluarga">Keluarga<br>
+			
+		<tr><td>Jumlah Anak:<td><input class="w3-input" type="text" name="janak">
+		<tr><td colspan=2><hr>
+		
+		<tr><td>Gaji Pokok:<td><input class="w3-input" type="text" name="gajipokok">
+		<tr><td>Tunjangan:<td><input class="w3-input" type="text" name="tunjangan">
+		<tr><td>Tunjangan Anak:<td><input class="w3-input" type="text" name="tjanak">
+		<tr><td>Total Gaji:<td><input class="w3-input" type="text" name="totalgaji">
+	</table>
+	</p>
+	</div>
+	
+	
+	<div class="w3-panel w3-cyan">
+	<p>
+	<center>
+		<input type="button" class="w3-button w3-red" value="proses" onclick="proses()">
+		<input type="button" class="w3-button w3-blue" value="Reset" onclick="reset()">
+	</p>
+	</div>
+</div>

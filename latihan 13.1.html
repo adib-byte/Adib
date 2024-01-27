@@ -1,0 +1,202 @@
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+
+<div class='w3-container'>
+<center>
+<h1> Membuat Menu Dengan Menggunakan W3 Bar
+<hr>
+</h1>
+</div>
+<div class="w3-bar w3-cyan">
+ <button class="w3-bar-item w3-button" onclick="openKota('Bandung')">Bandung</button>
+ <button class="w3-bar-item w3-button" onclick="openKota('Garut')">Garut</button>
+ <button class="w3-bar-item w3-button" onclick="openKota('Tasik')">Tasik</button>
+		<div class='w3-dropdown-hover'>
+			 <button class='w3-button'>Animasi W3-CSS</button>
+			 <div class='w3-dropdown-content w3-bar-block w3-card-4'>
+			 <button class='w3-bar-item w3-button' onclick="openKota('Latihan12')">Latihan12</button>
+			 <button class='w3-bar-item w3-button' onclick="openKota('Latihan11')">Latihan11</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+<div id="Bandung" class="w3-container kota w3-animate-zoom" style="display:none">
+ <h2>Bandung</h2>
+ <p>Dikenal dengan Julukan Kota Kembang, adalah Ibu Kota dari Provinsi Jawa Barat.</p>
+ <br>
+ Alun Alun Bandung
+ <br>
+ <img src='alun.jpg'>
+ </div>
+ 
+ <div id="Garut" class="w3-container kota w3-animate-zoom" style="display:none">
+ <h2>Garut</h2>
+ <p>Dikenal dengan Julukan Kota Dodol, dan jaman juga dikenal dengan Jeruk Garut atau Domba
+Garut</p>
+</div>
+<div id="Tasik" class="w3-container kota w3-animate-zoom" style="display:none">
+ <h2>Tasikmalaya</h2>
+ <p>Atau Tasikmalaya Dikenal dengan Julukan Kota Intan, dan Kota Kerajinan Tangan</p>
+</div>
+
+<div id="Latihan12" class="w3-container kota w3-animate-zoom" style="display:none">
+ <form name=form>
+<script> 
+function proses()
+	{
+		var bagian=document.form.bagian.value;
+		if(bagian=='HRD') var pokok=80000000;
+		if(bagian=='PEMASARAN') var pokok=4000000;
+		if(bagian=='PRODUKSI') var pokok=6000000;
+		if(bagian=='OB') var pokok=3000000;
+		document.form.pokok.value=pokok;
+		
+		var pendidikan=document.form.pendidikan.value;
+		if(pendidikan=="S1") var tjpendidikan=1000000;
+		if(pendidikan=="S2") var tjpendidikan=2000000;
+		if(pendidikan=="S3") var tjpendidikan=3000000;
+		document.form.tjpendidikan.value=tjpendidikan;
+		
+		var tj=0
+		if(document.form.anak.checked) tj=tj+(pokok*10/100);
+		if(document.form.istri.checked) tj=tj+(pokok*15/100);
+		if(document.form.makan.checked) tj=tj+(pokok*20/100);
+		document.form.tjlain.value=tj;
+		
+		total=pokok+tjpendidikan+tj;
+		document.form.total.value=total;
+		 
+	}
+	
+	
+function hapuss()
+	{
+		document.form.nama.value=' ';
+		document.form.bagian.value=' ';
+		document.form.pendidikan[0].checked=false;
+		document.form.pendidikan[1].checked=false;
+		document.form.pendidikan[2].checked=false;
+		document.form.anak.checked=false;
+		document.form.istri.checked=false;
+		document.form.makan.checked=false;
+		document.form.pokok.value=' ';
+		document.form.tjpendidikan.value=' ';
+	    document.form.tjlain.value=' ';
+		document.form.total.value=' ';
+	}
+	
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+
+<div class="w3-panel w3-purple">
+<center>
+<h1>Program Gaji Pegawai
+</div> 
+
+<div class="w3-panel w3-yellow w3-card-4">
+<center>
+<table>
+	<tr><td>Nama Pegawai<input class='w3-input' type='text' name='nama'>
+	<tr><td>Bagian<select class='w3-select' type='select' name='bagian'>
+	<option>HRD
+	<option>PEMASARAN
+	<option>PRODUKSI
+	<option>OB
+	<tr><td>PENDIDIKAN
+	<input class='w3-radio' type='radio' name='pendidikan' value='S1'>S1
+	<input class='w3-radio' type='radio' name='pendidikan' value='S2'>S2
+	<input class='w3-radio' type='radio' name='pendidikan' value='S3'>S3
+	<tr><td>TUNJANGAN
+	<tr><td><input class='w3-check' type='checkbox'  name='anak'>ANAK
+	<tr><td><input class='w3-check' type='checkbox'  name='istri'>ISTRI
+	<tr><td><input class='w3-check' type='checkbox'  name='makan'>MAKAN
+	<tr><td colspan=2><hr>
+	<tr><td>gaji poko<input class='w3-input' type='text' name='pokok'>
+	<tr><td>pendidikan<input class='w3-input' type='text' name='tjpendidikan'>
+	<tr><td>tunjangan lain<input class='w3-input' type='text' name='tjlain'>
+	<tr><td>total gaji<input class='w3-input' type='text' name='total'>
+	
+</div>
+		
+	<div class="w3-panel w3-purple">
+<p>
+<center>
+<input type='button' class='w3-button- w3-black w3-circle' value='sumbit' onclick='proses()'>
+<input type='button' class='w3-button- w3-black w3-circle' value='reset' onclick='hapuss()'>
+</p>
+</div>
+</div>
+
+<div id="Latihan11" class="w3-container kota w3-animate-zoom" style="display:none">
+ <form name=form1>
+<script> 
+function proses()
+	{
+		var barang=document.form1.barang.value;
+		var jumlah=document.form1.jumlah.value;
+		if(barang=='Sepatu') var harga=500000
+		if(barang=='Sandal') var harga=150000
+		if(barang=='Baju') var harga=350000
+		if(barang=='Kaos_kaki') var harga=20000
+		if(barang=='Celana') var harga=250000
+		var total=harga*jumlah;
+		document.form1.total.value=total;
+	}
+	
+function hapus()
+	{
+		document.form1.nama.value='';
+		document.form1.barang.value='';
+		document.form1.jumlah.value='';
+		document.form1.total.value='';
+	}
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+
+<div class="w3-panel w3-purple">
+<center>
+<h1>Program Penjualan
+</div> 
+
+<div class="w3-panel w3-yellow w3-card-4">
+<center>
+<table>
+	<tr><td>Nama Pembeli<input class='w3-input' type='text' name='nama'>
+	<tr><td>barang<select class='w3-select' type='select' name='barang'>
+	<option>Sepatu
+	<option>Sandal
+	<option>Baju
+    <option>Kaos_kaki	
+    <option>Celana
+	<tr><td>Jumlah<input class='w3-radio' type='radio' name='jumlah' value='1'>1
+	<input class='w3-radio' type='radio' name='jumlah' value='2'>2
+	<input class='w3-radio' type='radio' name='jumlah' value='3'>3
+	<tr><td colspan=2><hr>
+	<tr><td>Total<input class='w3-input' type='text' name='total'>
+	
+</div>
+		
+	<div class="w3-panel w3-black">
+<p>
+<center>
+<input type='button' class='w3-button- w3-black w3-circle' value='sumbit' onclick='proses()'>
+<input type='button' class='w3-button- w3-black w3-circle' value='reset' onclick='hapus()'>
+</p>
+</div>
+</div>
+
+<script> 
+
+function openKota(namakota) 
+{
+ var i;
+ var x = document.getElementsByClassName("kota");
+ for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none";
+ }
+ document.getElementById(namakota).style.display = "block";
+}
+</script>

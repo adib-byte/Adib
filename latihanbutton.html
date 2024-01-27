@@ -1,0 +1,67 @@
+<form name=form1>
+<script>
+function kali()
+{
+	var a=document.form1.a.value;
+	var b=document.form1.b.value;
+	var c=a*b;
+	document.form1.c.value=c;
+}
+function bagi()
+{
+	var a=document.form1.a.value;
+	var b=document.form1.b.value;
+	var c=a/b;
+	document.form1.c.value=c;
+}
+function kurang()
+{
+	var a=document.form1.a.value;
+	var b=document.form1.b.value;
+	var c=a-b;
+	document.form1.c.value=c;
+}
+function tambah()
+{
+	var a=document.form1.a.value;
+	var b=document.form1.b.value;
+	var c=a*1+b*1;
+	document.form1.c.value=c;
+}
+function hapus()
+{
+	document.form1.a.value='';
+	document.form1.b.value='';
+	document.form1.c.value='';
+}
+</script>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+
+<div class="w3-panel w3-gray">
+<center>
+<h1>Program kalkulator
+</div>
+
+<div class="w3-panel w3-grey w3-card-4">
+	<p>
+	<center>
+	<table>
+		<tr><td>A<td>:<input name=a>
+		<tr><td>B<td>:<input name=b>
+		<tr><td>C<td>:<input name=c>
+	</table>
+	</p>
+</div>
+		
+<div class="w3-panel w3-black">
+<p>
+<center>
+
+		<input type="button" class="w3-button w3-red w3-circle" value="*" onclick="kali()"><input type="button" class="w3-button w3-blue w3-circle" value="/" onclick="bagi()">
+	<input type="button" class="w3-button w3-green w3-circle" value="-" onclick="kurang()">
+	<input type="button" class="w3-button w3-grey w3-circle" value="+" onclick="tambah()">
+	<input type="button" class="w3-button w3-purple w3-circle" value="c" onclick="hapus()">
+</p>
+</div>

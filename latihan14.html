@@ -1,0 +1,81 @@
+<form name=form>
+<script>
+function proses()
+{
+var kjuan=document.form.kjuan.value;
+var Kelas=document.form.Kelas.value;
+if ((kjuan=="Bandung")&&(Kelas=="Ekonomi")) var htiket=70000;
+if ((kjuan=="Bandung")&&(Kelas=="Bisnis")) var htiket=80000;
+if ((kjuan=="Bandung")&&(Kelas=="Eksekutif")) var htiket=90000;
+
+if ((kjuan=="Jakarta")&&(Kelas=="Ekonomi")) var htiket=100000;
+if ((kjuan=="Jakarta")&&(Kelas=="Bisnis")) var htiket=150000;
+if ((kjuan=="Jakarta")&&(Kelas=="Eksekutif")) var htiket=300000;
+
+if ((kjuan=="Surabaya")&&(Kelas=="Ekonomi")) var htiket=150000;
+if ((kjuan=="Surabaya")&&(Kelas=="Bisnis")) var htiket=200000;
+if ((kjuan=="Surabaya")&&(Kelas=="Eksekutif")) var htiket=300000;
+document.form.htiket.value=htiket;
+
+var jtiket=document.form.jtiket.value;
+tharga=jtiket*htiket;
+document.form.tharga.value=tharga;
+}
+
+functionreset()
+{
+	document.form.npemesan.value='';
+	document.form.kjuan.value='';
+	document.form.Kelas.value='';
+	document.form.htiket.value='';
+	document.form.tharga.value='';
+
+}
+</script>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+
+<div class="w3-container">
+
+	<div class="w3-panel w3-brown">
+	<center>
+	<h1>Program Tiket Kereta Api
+	</div>
+	
+	<div class="w3-panel w3-blue w3-card-4">
+	<p>
+	<center>
+	<table>
+		<tr><td>Nama Pemesan<td><input class="w3-input" type="text" name="npemesan">
+		<tr><td>Kota Tujuan<td><select class="w3-select" type="select" name="kjuan">
+		<option>Bandung<br>
+		<option>Surabaya<br>
+		<option>Jakarta<br>
+		
+		<tr><td>Kelas<td><input class="w3-radio" type="radio" name="Kelas" value="Ekonomi">Ekonomi
+		<input class="w3-radio" type="radio" name="Kelas" value="Bisnis">Bisnis
+		<input class="w3-radio" type="radio" name="Kelas" value="Eksekutif">Eksekutif
+		
+		<tr><td>Jumlah Tiket<td><select class="w3-select" type="select" name="jtiket">
+		<option>1
+		<option>2
+		<option>3
+		<option>4
+
+			<tr><td colspan=2><hr>
+		<tr><td>Harga Tiket<td><input class="w3-input" type="text" name="htiket">
+		<tr><td>Total Harga<td><input class="w3-input" type="text" name="tharga">
+	</table>
+	</p>
+	</div>
+	
+	
+	<div class="w3-panel w3-cyan">
+	<p>
+	<center>
+		<input type="button" class="w3-button w3-red" value="proses" onclick="proses()">
+		<input type="button" class="w3-button w3-blue" value="Reset" onclick="reset()">
+	</p>
+	</div>
+</div>

@@ -1,0 +1,61 @@
+<form name=form1>
+<script>
+function proses()
+{
+	var namabarang=document.form1.namabarang.value;
+	var jumlah=document.form1.jumlah.value;
+	if (namabarang=="Sepatu")var harga=500000;
+	if (namabarang=="sandal")var harga=200000;
+	if (namabarang=="Baju")var harga=150000;
+	if (namabarang=="Topi")var harga=100000;
+	var total=harga*jumlah;
+	document.form1.total.value=total;
+}
+
+function reset()
+{
+	document.form1.namapembeli.value='';
+	document.form1.jumlah.value='';
+	document.form1.total.value='';
+	document.form1.jumlah.value='';
+}
+</script>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+
+<div class="w3-container">
+
+	<div class="w3-panel w3-brown">
+	<center>
+	<h1>Program penjualan	
+	</div>
+	
+	<div class="w3-panel w3-blue w3-card-4">
+	<p>
+	<center>
+	<table>
+		<tr><td>Nama Pembeli<td><input class="w3-input" type="text" name="namapembeli">
+		<tr><td>Nama Barang<td><select class="w3-select" type="select" name="namabarang">
+		<option>Sepatu
+		<option>sandal
+		<option>Baju
+		<option>Topi
+		
+		<tr><td>Jumlah<td><input class="w3-radio" type="radio" name="jumlah" value='1'>1
+		<input class="w3-radio" type="radio" name="jumlah" value='2'>2
+		<input class="w3-radio" type="radio" name="jumlah" value="3">3
+		<tr><td>Total Harga<td><input class="w3-input" type="text" name="total">
+	</table>
+	</p>
+	</div>
+	
+	
+	<div class="w3-panel w3-cyan">
+	<p>
+	<center>
+		<input type="button" class="w3-button w3-red" value="proses" onclick="proses()">
+		<input type="button" class="w3-button w3-blue" value="Reset" onclick="reset()">
+	</p>
+	</div>
+</div>

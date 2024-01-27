@@ -1,0 +1,40 @@
+<form name=form>
+<script>
+function proses()
+{
+	var harga=document.form.harga.value;
+	var jumlah=document.form.jumlah.value;
+	var total=harga*jumlah;
+	document.form.total.value=total;
+}
+</script>
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+
+<div class="w3-container">
+	<div class="w3-panel w3-dark-grey">
+	<center>
+	<h1>Forum Penjualan
+	</div>
+	
+	<div class="w3-panel w3-grey w3-card-4">
+		<center>
+		<table>
+			<tr><td>Kode<td>:<input name=kode size=5>
+			<tr><td>Nama<td>:<input name=Nama size=10>
+			<tr><td>Harga<td>:<input name=Harga size=8>
+			<tr><td>Jumlah<td>:<input name=Jumlah size=6>
+			<tr><td>Total<td>:<input name=Total size=10>
+		</table>
+	</div>
+	
+	<div class="w3-panel w3-black w3-round-xlarge">
+	<p>
+		<center>
+		<input type=button value=proses onclick="proses()">
+		<input type=reset>	
+	</p>	
+	</div>
+</div>
